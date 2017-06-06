@@ -5,13 +5,31 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  
+  <ion-content padding>
+  <h2>Today list</h2>
+  <ion-list>
+    <ion-item *ngFor="let today of todayList" >
+      {{ today.description }} - {{ today.weight }}KG X {{ today.numberRepetition }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content padding>
+  <h2>Last week list</h2>
+  <ion-list>
+    <ion-item *ngFor="let today of lastWeekList">
+      {{ today.description }}  - {{ today.weight }}KG X {{ today.numberRepetition }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content padding>
+  <h2>Two weeks ago</h2>
+  <ion-list>
+    <ion-item *ngFor="let today of twoWeeksAgo">
+      {{ today.description }} - {{ today.weight }}KG X {{ today.numberRepetition }}
+    </ion-item>
+  </ion-list>
+</ion-content>
 </ion-content>
